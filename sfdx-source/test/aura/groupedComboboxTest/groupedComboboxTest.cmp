@@ -1,0 +1,14 @@
+<aura:component implements="lightning:isUrlAddressable" access="global">
+    <aura:attribute name="items" type="Object"/>
+
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }" />
+
+    <div class="panel">
+        <c:groupedCombobox
+            name="groupedCombobox"
+            label="Grouped Combobox"
+            options="{! v.items }"
+        >
+        </c:groupedCombobox>
+    </div>
+</aura:component>
